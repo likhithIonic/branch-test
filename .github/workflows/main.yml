@@ -8,18 +8,7 @@ on:
     branches: [ master ]
     
 jobs:
-  # This will build an IPA & Upload the artifact in iOS.zip
 
-#   build-checkout:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#         with:
-#     # Repository name with owner. For example, actions/checkout
-#     # Default: ${{ github.repository }}
-#           repository: 'likhithIonic/branch-test'   
-#           ref: dev   
-    # 
   build-web-test:
     runs-on: ubuntu-latest
     steps:
