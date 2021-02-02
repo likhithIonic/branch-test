@@ -10,20 +10,23 @@ on:
 jobs:
   # This will build an IPA & Upload the artifact in iOS.zip
 
-  build-checkout:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-    # Repository name with owner. For example, actions/checkout
-    # Default: ${{ github.repository }}
-          repository: 'likhithIonic/branch-test'   
-          ref: dev   
+#   build-checkout:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#         with:
+#     # Repository name with owner. For example, actions/checkout
+#     # Default: ${{ github.repository }}
+#           repository: 'likhithIonic/branch-test'   
+#           ref: dev   
     # 
   build-web-test:
-    needs: [build-checkout]
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false # Per the GitHub Pages action below
       - name: VueCap web
         uses: ionic-team/appflow-build@fix-use-head-ref-for-prs
         with:
