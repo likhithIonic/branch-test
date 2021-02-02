@@ -21,6 +21,7 @@ jobs:
           ref: dev   
     # 
   build-web-test:
+    needs: [build-checkout]
     runs-on: ubuntu-latest
     steps:
       - name: VueCap web
