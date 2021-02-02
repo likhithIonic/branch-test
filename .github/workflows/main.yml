@@ -26,6 +26,6 @@ jobs:
         uses: ionic-team/appflow-build@v1
         with:
           token: ${{ secrets.SECRET }}
-          app-id: a9bdd75c
+          app-id: c5c9fcb5
           platform: Web
           artifact-retention-days: 1
