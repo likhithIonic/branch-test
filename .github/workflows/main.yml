@@ -27,7 +27,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false # Per the GitHub Pages action below
-          ref: dev
       - name: VueCap web
         uses: ionic-team/appflow-build@fix-use-head-ref-for-prs
         with:
