@@ -12,10 +12,10 @@ jobs:
   build-web-test:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false # Per the GitHub Pages action below
+#       - name: checkout
+#         uses: actions/checkout@v2
+#         with:
+#           persist-credentials: false # Per the GitHub Pages action below
       - name: VueCap web
         uses: ionic-team/appflow-build@fix-use-head-ref-for-prs
         with:
