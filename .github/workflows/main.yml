@@ -17,7 +17,7 @@ jobs:
 #         with:
 #           persist-credentials: false # Per the GitHub Pages action below
       - name: VueCap web
-        uses: ionic-team/appflow-build@fix-use-head-ref-for-prs
+        uses: ionic-team/appflow-build@v1
         with:
           token: ${{ secrets.SECRET }}
           app-id: c5c9fcb5
